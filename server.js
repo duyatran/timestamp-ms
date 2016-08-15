@@ -23,7 +23,10 @@ app.get('/:time', function(req, res) {
   }
   res.json(output);
 });
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
   console.log('Example app listening on port 3000!');
 });
 
